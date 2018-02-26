@@ -1,0 +1,26 @@
+//class Solution {
+    public int hammingDistance(int x, int y) {
+        String A=Integer.toBinaryString(x);
+        String B=Integer.toBinaryString(y);
+        char []arr1=A.toCharArray();
+        char []arr2=B.toCharArray();
+        int distance=0;
+        for(int i=0;i<=arr1.length-1;i++){
+            if (arr1[i]==arr2[i]){
+                distance++;
+            }
+            else {
+                continue;
+                    }
+            
+                
+        }
+        return distance;    
+    }
+}// //toBinaryString只能从首位非零数字开始算起，所以错误。
+
+public int hammingDistance(int x, int y) {  
+    int xor = x ^ y, count = 0;  
+    for (int i=0;i<32;i++) count += (xor >> i) & 1;  
+    return count;  
+}  
