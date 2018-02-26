@@ -1,0 +1,17 @@
+public class Solution {
+    /**
+     * @param a: An integer
+     * @param b: An integer
+     * @return: The sum of a and b
+     */
+    public int aplusb(int a, int b) {
+     int c,d;
+     while ((a&b)!=0)
+     {c=a^b;
+      d=(a&b)<<1;
+      a=c;
+      b=d;
+     }return a|b;
+     // write your code here
+    } 
+}
