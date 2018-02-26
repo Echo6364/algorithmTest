@@ -1,0 +1,26 @@
+public class Solution {
+    /**
+     * @param n: An integer
+     * @return: A list of strings.
+     */
+    public List<String> fizzBuzz(int n) {
+        if(n ==0) return null;  
+        List<String> list = new ArrayList<>(); 
+        for(int i=1;i<=n;i++)
+        {if((i%3==0)&&(i%5==0))
+         {list.add("fizz buzz");
+         continue;
+            }
+         else if(i%3==0) 
+         {list.add("fizz");
+          continue;}
+         else if(i%5==0)
+          {list.add("buzz");
+          continue;}
+         else
+          {list.add(String.valueOf(i));
+          }
+        }
+     return list;  // write your code here
+        }
+}
