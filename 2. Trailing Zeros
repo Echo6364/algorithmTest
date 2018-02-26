@@ -1,0 +1,25 @@
+public class Solution {
+    /*
+     * @param n: An integer
+     * @return: An integer, denote the number of trailing zeros in n!
+     */
+    public long trailingZeros(long n) {
+       
+        int count5=0;
+        int a,b;
+        for(int i=1;i<=n;i++)
+        {if (i%5==0)
+         {a=i;
+          b=i;
+            while(b%5==0) 
+             {b=b/5;
+             count5++;}
+             }
+      
+         
+       }// write your code here, try to do it without arithmetic operators.
+   return count5;
+        
+    }
+    
+}
